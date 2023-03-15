@@ -1,0 +1,10 @@
+spring:
+  h2:
+    console.enabled: true
+  datasource:
+    generate-unique-name: false
+    name: users
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
