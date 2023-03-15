@@ -10,7 +10,7 @@ import java.sql.Date;
 import java.util.List;
 
 @Configuration
-public class DataBaseFill {
+public class UserConfig {
 
     @Bean
     CommandLineRunner commandLineRunner(UserRepository userRepository) {
