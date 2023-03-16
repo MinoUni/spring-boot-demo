@@ -3,7 +3,7 @@ spring:
     console.enabled: true
   datasource:
     generate-unique-name: false
-    url: jdbc:h2:mem:users
+    url: jdbc:h2:mem:test
     driverClassName: org.h2.Driver
     username: sa
     password:
