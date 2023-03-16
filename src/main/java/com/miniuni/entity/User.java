@@ -44,9 +44,7 @@ public class User {
     private String lastName;
 
     @Temporal(TemporalType.DATE)
-    @Column(
-            name = "birth_date",
-            nullable = false)
+    @Column(name = "birth_date")
     private LocalDate birthdate;
 
     public User(String firstName,

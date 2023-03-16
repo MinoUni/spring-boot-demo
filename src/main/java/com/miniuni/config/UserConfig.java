@@ -21,7 +21,7 @@ public class UserConfig {
                     new User("Amber", "Stark", LocalDate.of(1999, SEPTEMBER, 19)),
                     new User("Lexi", "Woods", LocalDate.of(2020, MAY, 25)),
                     new User("Mary", "Jones", LocalDate.of(1987, MARCH, 15)),
-                    new User("John", "Bricks", LocalDate.of(1967, FEBRUARY, 22))
+                    new User("John", "Bricks", null)
             );
             userRepository.saveAll(users);
         };
