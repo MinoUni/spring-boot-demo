@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Objects;
 
 @Service
 @Slf4j
@@ -42,6 +43,9 @@ public class UserServiceImpl implements UserService {
      * @return user age
      */
     private Integer calcAge(User user) {
+        if (Objects.isNull(user.getBirthdate())) {
+            return 0;
+        }
         return Period.between(user.getBirthdate(), LocalDate.now()).getYears();
     }
 }
