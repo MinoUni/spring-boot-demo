@@ -1,9 +1,12 @@
 package com.miniuni.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity(name = "User")
 @Table(name = "users")
@@ -44,11 +47,11 @@ public class User {
     @Column(
             name = "birth_date",
             nullable = false)
-    private Date birthdate;
+    private LocalDate birthdate;
 
     public User(String firstName,
                 String lastName,
-                Date birthdate) {
+                LocalDate birthdate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthdate = birthdate;
