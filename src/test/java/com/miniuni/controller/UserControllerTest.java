@@ -15,13 +15,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-class UserControllerIntTest {
+class UserControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    void getUserWithResponse200() throws Exception {
+    void getUserShouldReturnUserDtoWithResponse200() throws Exception {
         this.mockMvc.perform(get("/api/v1/users/1"))
                 .andDo(print())
                 .andExpect(status().isOk())
@@ -31,7 +31,7 @@ class UserControllerIntTest {
     }
 
     @Test
-    void getUserWithResponse404() throws Exception {
+    void getUserShouldReturnExceptionWithResponse404() throws Exception {
         this.mockMvc.perform(get("/api/v1/users/{id}", 99))
                 .andDo(print())
                 .andExpect(status().isNotFound())
